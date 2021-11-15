@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+}
+
+main{
+  background: black;
+}
+
+main > h1{
+  color: aliceblue;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+h4{
+  color: #fff;
+  font-weight: lighter;
+}
+
+/********************************* HEADER *********************************/
+.carousel-item > img{
+  object-fit: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* iconos siguiente y anterior */
+.fa-chevron-left, .fa-chevron-right{
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4));
+  margin-top: 1.5em;
+  padding: 0.5em;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+
+.fa-chevron-left{
+  margin-right: auto;
+}
+
+.fa-chevron-right{
+  margin-left: auto;
+}
+/********************************* MENU PRINCIPAL *********************************/
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  display: inline-block;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+a{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  letter-spacing: 3px;
+  font-style: normal;
+  transition: 0s;
+}
+
+a:link, a:visited, a:active{
+  text-decoration:none;
+}
+
+a:hover{
+  color: rgb(48, 218, 32) !important;
+}
+
+.menu-r{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2));
+  text-align: center;
+  line-height: 40px;
+  transition: all 1100ms;
+}
+
+.menu-r.retractil{
+  height: 50px;
+  line-height: 50px;
+  background: #000;
+  color: #fff;
+}
+
+/**************** LOGO **************/
+.logoMenu{
+  width: 100px;
+	height: auto; /* el logo estaba enorme, con estos datos de poner altura y el margin ha reducido el logo. La altura es 30px pero la anchura la calcula automáticamente*/
+	margin: 15px 0 0 20px;
+}
+
+
+@media (max-width: 480px) {
+  .logos-1{
+    display: none;
+  }
+
+  .logoMenu-2{
+    height: auto; /* el logo estaba enorme, con estos datos de poner altura y el margin ha reducido el logo. La altura es 30px pero la anchura la calcula automáticamente*/
+    margin: 15px 0 0 20px;
+    width: 65px;
+  }
+
+  ul{
+    display: grid;
+  }
+}
+
+
+@media (min-width: 481px) {
+  .logos-2{
+    display: none;
+  }
+}

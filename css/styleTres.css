@@ -1,0 +1,154 @@
+/*********************** ESTÍLOS GENERALES ***********************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 
+.container-2 {
+  padding-left: 13em;
+  padding-right: 13em;
+} */
+
+body {
+  min-height: 100vh;
+  background-color: black;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: azure;
+  font-size: 1.2em;
+}
+
+/*********************** BARRA DE NAVEGACIÓN ***********************/
+.navbar{
+  /* padding: 1.5em; */
+  background: rgb(37, 37, 37) !important;
+}
+
+.navbar-brand{
+  color: #757575 !important;
+  /* font-size: 2em !important; */
+}
+
+.navbar-brand:hover{
+  color: #fff !important;
+}
+/*********************** GALERÍA DE FOTOS ***********************/
+/* contenedor de galeria */
+.container-2 {
+  max-width: 74rem;
+  margin: 0 auto;
+}
+
+/* fotos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+}
+
+.gallery-item {
+  
+  /* Minimum width of 24rem and grow to fit available space */
+  flex: 1 0 24rem;
+  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 5px;
+  filter: brightness(80%);
+}
+
+.gallery-image:hover {
+  filter: brightness(100%);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+@supports (display: grid) {
+  .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-gap: 2rem;
+  }
+
+  .gallery,
+  .gallery-item {
+      margin: 0;
+  }
+}
+
+/************** PRESUPUESTO  **************/
+.eventos-bg{
+  padding: 4em 1em;
+}
+
+.presupuesto-bg{
+  background: rgb(207, 205, 205);
+  border-radius: 5px 5px 0 0 !important;
+}
+
+.text-pr, .text-pr > p{
+  color: #626060;
+}
+
+.formulario{
+  background: white;
+  color: rgb(167, 167, 167);
+  font-size: 1.2em;
+  padding: 2em;
+  border: 1px solid #cacaca;
+  border-radius: 0 0 5px 5px !important;
+}
+
+.form-check-label > a{
+  color: gray;
+  padding-bottom: 6px;
+}
+
+.btn-pr{
+  border: none;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid, .form-control:active {
+  border-color: rgb(205, 207, 205);
+  background-image: none;
+}
+
+/*********************** FOOTER ***********************/
+hr {
+  color: gray !important;
+  border-top: 1px solid #3f3f3f;
+}
+
+
+@media (min-width: 992px) {
+  .contacto-ocultar{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .contacto-mostrar{
+    display: none;
+  }
+  .contacto-ocultar > h2{
+    font-size: 1.2em;
+  }
+}
